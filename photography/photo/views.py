@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-
+from photo.models import Avatar
 
 class HomePhoto(TemplateView):
     template_name = 'photo/index.html'
