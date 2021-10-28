@@ -1,9 +1,11 @@
 <nav id="colorlib-main-menu" role="navigation">
     <ul>
-        <li class="colorlib-active"><a href="index.html">Главная</a></li>
-        <li><a href="about.html">Услуги и цены</a></li>
-        <li><a href="collection.html">Работы</a></li>
-        <li><a href="services.html">Контакты</a></li>
-        <li><a href="blog.html">Обо мне</a></li>
+        <li {% block home_under_line %}{{ home_under_line | safe }}{% endblock %}><a href="{% url 'home' %}">Главная</a></li>
+        <li {% block price_under_line %}{{ price_under_line | safe }}{% endblock %}><a href="{% url 'price' %}">Услуги и цены</a></li>
+        <li {% block collection_under_line %}{{ collection_under_line | safe }}{% endblock %}><a href="{% url 'collection' %}">Работы</a></li>
+        <li {% block contacts_under_line %}{{ contacts_under_line | safe }}{% endblock %}><a href="{% url 'contacts' %}">Контакты</a></li>
+        <li {% block about_under_line %}{{ about_under_line | safe }}{% endblock %}><a href="{% url 'about' %}">Обо мне</a></li>
+{#        <li><a href="services.html">Контакты</a></li>#}
+{#        <li><a href="blog.html">Обо мне</a></li>#}
     </ul>
 </nav>

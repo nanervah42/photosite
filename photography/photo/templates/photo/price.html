@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div id="colorlib-main">
+    <section class="ftco-section ftco-bread">
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-center align-items-center">
+                <div class="col-md-8 ftco-animate">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Главная</a></span> <span>Услуги и цены</span>
+                    </p>
+                    <h1 class="bread">Услуги и цены</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-big-lens"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">Комплекс услуг "Прогулка"</h3>
+                    <p>Помощь в подборе одежды</p>
+                    <p>40 лучших фотографий в цветокоррекции. Из них 10 в авторской художественной обработке</p>
+                    <p>Передача обработанных фотографий через Google Диск</p>
+                    <p>Срок передачи готовых фотографий 1 неделя</p>
+                    <p>СТОИМОСТЬ: <font color="black">2500руб</font></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-camera"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">Комплекс услуг "Фото в студии"</h3>
+                    <p>Фотосъемка в студии 1 час</p>
+                    <p>Помощь в подборе одежды, макияжа, фотостудии</p>
+                    <p>60 лучших фотографий в цветокоррекции. Из них 10 в авторской художественной обработке</p>
+                    <p>Передача обработанных фотографий через Google Диск</p>
+                    <p>Срок передачи готовых фотографий 1-1.5 недели</p>
+                    <p>СТОИМОСТЬ: <font color="black">2500руб+стоимость фотостудии за час (цены разные)</font></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-polaroid-pictures"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">Комплекс услуг "Свадьба"</h3>
+                    <p>Фотосъемка длительностью 10 часов (10.00-20.00)</p>
+                    <p>Включает в себя: сборы, ЗАГС, фото жениха и невесты, торжественная банкетная  часть</p>
+                    <p>200 лучших фотографий в цветокоррекции, из них 15 в авторской художественной обработке</p>
+                    <p>Передача обработанных фотографий через ФЛЭШ-накопитель</p>
+                    <p>Лучшие 10 фотографий в распечатанном виде в формате 10*15</p>
+                    <p>Срок передачи готовых фотографий 2 недели</p>
+                    <p>СТОИМОСТЬ: <font color="black">25000руб</font></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-focusing-target"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">"Экспресс" съемка</h3>
+                    <p>Любая фотосъемка длительностью 30 минут</p>
+                    <p>Съемка в определенной фотозоне города/выписка с роддома/домашнее фото важного события</p>
+                    <p>20 лучших фотографий в цветокоррекции, из них 5 фотографии в авторской художественной обработке</p>
+                    <p>Передача обработанных фотографий через Google Диск</p>
+                    <p>Срок передачи готовых фотографий 1 неделя</p>
+                    <p>Бонус- 1 фото в день съемки</p>
+                    <p>СТОИМОСТЬ: <font color="black">1500руб</font></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-sel Searchf-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-printing-photo"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">Дополнительные услуги</h3>
+                    <p>Стоимость одного часа работы <font color="black">2500руб</font>, последующего <font color="black">2000руб</font> за каждый дополнительный час</p>
+                    <p>Аренда животных и студийных реквизитов оплачивается отдельно(примерно <font color="black">от 500 руб</font>)</p>
+                    <p>Ретушь дополнительных фотографий <font color="black">300 руб за шт.</font></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services py-4 d-block">
+                <div class="d-flex justify-content-start">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-film"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                    <h3 class="heading mb-3">Комплекс услуг "Всё включено"</h3>
+                    <p>В разработке...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
