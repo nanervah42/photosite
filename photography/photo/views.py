@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
-from .models import Carousel
+from .models import Carousel, InstagramSection, WorksPhotos
 
 class HomePhoto(ListView):
     model = Carousel
@@ -11,6 +11,7 @@ class HomePhoto(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Главная страница'
         context['home_under_line'] = 'class="colorlib-active"'
+        context['insta'] = InstagramSection.objects.filter(is_published=True)
         return context
 
     def get_queryset(self):
@@ -26,7 +27,9 @@ class Price(TemplateView):
         context['price_under_line'] = 'class="colorlib-active"'
         return context
 
-class Collection(TemplateView):
+
+class Collection(ListView):
+    model = WorksPhotos
     template_name = 'photo/collection.html'
     context_object_name = 'collection'
 
@@ -35,6 +38,10 @@ class Collection(TemplateView):
         context['title'] = 'Работы'
         context['collection_under_line'] = 'class="colorlib-active"'
         return context
+
+    def get_queryset(self):
+        return WorksPhotos.objects.filter(is_published=True).select_related('category')
+
 
 class Contacts(TemplateView):
     template_name = 'photo/contacts.html'
