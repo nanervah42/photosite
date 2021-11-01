@@ -25,12 +25,16 @@
 
                     {% for item in collection %}
                     <div class="col-md-4 ftco-animate">
-                        <a href="/media/{{ item.photo }}"
+                        <a href="{{ item.photo.url }}"
                            class="photography-entry img image-popup d-flex justify-content-start align-items-end"
                            style="background-image: url({{ item.photo.url }});">
                             <div class="overlay"></div>
                             <div class="text ml-4 mb-4">
-                                <h3>Photo {{ forloop.counter }}</h3>
+                                {% if forloop.counter < 10 %}
+                                    <h3>Photo 0{{ forloop.counter }}</h3>
+                                {% else %}
+                                    <h3>Photo {{ forloop.counter }}</h3>
+                                {% endif %}
                                 <span class="tag">{{ item.category }}</span>
                             </div>
                         </a>

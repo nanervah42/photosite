@@ -77,8 +77,8 @@
                 <div class="row no-gutters">
                     {% for item in insta %}
                     <div class="col-sm-12 col-md ftco-animate">
-                        <a href="/media/{{ item.photo }}" class="insta-img image-popup"
-                           style="background-image: url(/media/{{ item.photo }});">
+                        <a href="{{ item.photo.url }}" class="insta-img image-popup"
+                           style="background-image: url({{ item.photo.url }});">
                             <div class="icon d-flex justify-content-center">
                                 <span class="icon-instagram align-self-center"></span>
                             </div>
