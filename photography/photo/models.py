@@ -1,7 +1,9 @@
 from django.db import models
+from django_resized import ResizedImageField
 
 class Avatar(models.Model):
-    photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Аватар', blank=False)
+    # photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Аватар', blank=False)
+    photo = ResizedImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Аватар', blank=False)
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     class Meta:
@@ -9,7 +11,8 @@ class Avatar(models.Model):
         verbose_name_plural = 'Аватары'
 
 class Carousel(models.Model):
-    photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Карусель', blank=False)
+    # photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Карусель', blank=False)
+    photo = ResizedImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Карусель', blank=False)
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     class Meta:
@@ -18,7 +21,8 @@ class Carousel(models.Model):
 
 
 class InstagramSection(models.Model):
-    photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Инстаграм линия', blank=False)
+    # photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Инстаграм линия', blank=False)
+    photo = ResizedImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Инстаграм линия', blank=False)
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     class Meta:
@@ -38,7 +42,8 @@ class WorksCategory(models.Model):
 
 
 class WorksPhotos(models.Model):
-    photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Фотографии работ', blank=False)
+    # photo = models.ImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Фотографии работ', blank=False)
+    photo = ResizedImageField(upload_to='photo/%Y/%m/%d/', verbose_name='Фотографии работ', blank=False)
     category = models.ForeignKey('WorksCategory', on_delete=models.PROTECT, verbose_name='Категория')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
