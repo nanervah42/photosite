@@ -50,3 +50,4 @@ class WorksPhotos(models.Model):
     class Meta:
         verbose_name = 'Фотографии работ'
         verbose_name_plural = 'Фотографии работ'
+        ordering = ['-pk']
